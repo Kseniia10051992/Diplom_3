@@ -1,5 +1,6 @@
 import constant.NameButtonForLogin;
 import generator.GeneratorUser;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.http.ContentType;
 import org.junit.After;
 import org.junit.Before;
@@ -20,8 +21,10 @@ public class GeneralTest {
     public TheUserPage theUserPage;
 
 
+
     @Before
     public void create() {
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(URL);
         homePage = new HomePage(driver);

@@ -10,32 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class RegistrationTest {
-    private WebDriver driver;
-    private HomePage homePage;
-    private LoginPage loginPage;
-    private RegistrationPage registrationPage;
+public class RegistrationTest extends GeneralTest{
     public static final String INVALID_PASSWORD = "Некорректный пароль";
     private final GeneratorUser generatorUser = new GeneratorUser();
-    private final String url = "https://stellarburgers.nomoreparties.site/";
     private final String url2 = "https://stellarburgers.nomoreparties.site/login";
     private String actual;
 
-    @Before
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get(url);
 
-        homePage = new HomePage(driver);
-        loginPage = new LoginPage(driver);
-        registrationPage = new RegistrationPage(driver);
-    }
-
-    @After
-    public void quitDriver() {
-        driver.quit();
-    }
 
     @Test
     @DisplayName("Успешная регистрация. Минимальный пароль — шесть символов")

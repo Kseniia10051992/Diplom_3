@@ -14,6 +14,9 @@ public class HomePage {
     public final By bunBlock = By.xpath(".//*[text()='Булки']//parent::div");
     public final By sauceBlock = By.xpath(".//*[text()='Соусы']//parent::div");
     public final By fillingBlock = By.xpath(".//*[text()='Начинки']//parent::div");
+    public static final String ELEMENT = "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect";
+
+
     public static final String CLASS = "class";
     public HomePage(WebDriver driver) {
 
@@ -80,7 +83,8 @@ public class HomePage {
 
     public String classNameGet(NameBlock nameBlock) {
 
-        return blockGet( nameBlock ).getAttribute(CLASS);
+        return blockGet( nameBlock ).getAttribute( CLASS );
+
     }
     }
 

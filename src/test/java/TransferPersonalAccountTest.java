@@ -24,7 +24,6 @@ public class TransferPersonalAccountTest extends GeneralTest {
         theUserPage.clickExit();
         loginPage.waitingHeaderLoad();
         String Url = "https://stellarburgers.nomoreparties.site/login";
-
         assertEquals(Url, driver.getCurrentUrl());
     }
 

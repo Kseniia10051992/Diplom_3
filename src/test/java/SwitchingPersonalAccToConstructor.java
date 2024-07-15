@@ -12,13 +12,14 @@ import static org.junit.Assert.assertEquals;
 public class SwitchingPersonalAccToConstructor extends GeneralTest {
     public NameButtonForConstructor buttonName;
     public SwitchingPersonalAccToConstructor(NameButtonForConstructor buttonName) {
+
         this.buttonName = buttonName;
     }
 
     @Parameterized.Parameters
     public static Object[][] getParameters() {
         return new Object[][]{
-                {},
+                {CONSTRUCTOR},
                 {LOGO}
         };
     }
